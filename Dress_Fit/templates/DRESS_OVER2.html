@@ -1,0 +1,199 @@
+
+{% extends 'Dress_Fit/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'chat.css' %}">
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="{% static 'js/js/jquery-3.2.1.min.js' %}"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="{% static 'js/js/bootstrap.min.js' %}"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+ 	<div class="about py-12" id="about" >
+		<div class="container py-xl-2 py-lg-1">
+            <div class="alert alert-warning" role="alert">
+
+
+			<h3 class="title-w3 mb-sm-5 mb-4 text-dark text-center font-weight-bold">BEST DRESS   </h3>
+
+</div>
+
+
+            <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Shirts</h5>
+
+        	<form   method="post">
+							         {% csrf_token %}
+
+
+
+<button type="submit" name="shirt_dis"  class="btn btn-success">
+  <img src="static/images/DISABLED.png" width="100" height="100" />
+</button>
+
+<button type="submit" name="shirt_red"  class="btn btn-success">
+  <img src="static/images/full_shirt_red.png" width="100" height="100" />
+</button>
+
+
+<button type="submit" name="shirt_creme"  class="btn btn-success">
+  <img src="static/images/full_shirt_creme.png" width="100" height="100" />
+</button>
+
+
+   <button type="submit" name="shirt_yellow"  class="btn btn-success">
+  <img src="static/images/full_shirt_yellow.png" width="100" height="100" />
+</button>
+
+   <button type="submit" name="shirt_blue"  class="btn btn-success">
+  <img src="static/images/full_shirt_blue.png" width="100" height="100" />
+</button>
+
+    <button type="submit" name="shirt_pink"  class="btn btn-success">
+  <img src="static/images/full_shirt_pink.png" width="100" height="100" />
+</button>
+
+	</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Pants    </h5>
+
+
+        	<form   method="post">
+							         {% csrf_token %}
+
+
+
+<button type="submit" name="pant_dis"  class="btn btn-success">
+  <img src="static/images/DISABLED.png" width="100" height="200" />
+</button>
+
+<button type="submit" name="fullpant_olive"  class="btn btn-success">
+  <img src="static/images/fullpant_olive.png" width="100" height="200" />
+</button>
+
+
+<button type="submit" name="fullpant_white"  class="btn btn-success">
+  <img src="static/images/fullpant_white.png" width="100" height="200" />
+</button>
+
+
+   <button type="submit" name="fullpant_blue"  class="btn btn-success">
+  <img src="static/images/fullpant_blue.png" width="100" height="200" />
+</button>
+
+   <button type="submit" name="fullpant_red"  class="btn btn-success">
+  <img src="static/images/fullpant_red.png" width="100" height="200" />
+</button>
+
+    <button type="submit" name="fullpant_brown"  class="btn btn-success">
+  <img src="static/images/fullpant_brown.png" width="100" height="200" />
+</button>
+
+
+     <button type="submit" name="fullpant_brown"  class="btn btn-success">
+  <img src="static/images/fullpant_brown.png" width="100" height="200" />
+</button>
+
+    <button type="submit" name="fullpant_green"  class="btn btn-success">
+  <img src="static/images/fullpant_green.png" width="100" height="200" />
+</button>
+
+	</form>
+
+<form   method="post">
+							         {% csrf_token %}
+
+ 	<input class="btn btn-danger"  type="submit" value="SHOW" name="load_video">
+
+
+</span>
+						</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+
+
+
+
+
+     <script language="javascript">
+        function printdiv(printpage) {
+            var headstr = "<html><head><title></title></head><body>";
+            var footstr = "</body>";
+            var newstr = document.all.item(printpage).innerHTML;
+            var oldstr = document.body.innerHTML;
+            document.body.innerHTML = headstr + newstr + footstr;
+            window.print();
+            document.body.innerHTML = oldstr;
+            location.reload();
+            return false;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+
+
+<script src="{% static 'chat.js' %}"></script>
+</html>
+
+
+
+{% endblock content %}
+
+
+
+
+
+

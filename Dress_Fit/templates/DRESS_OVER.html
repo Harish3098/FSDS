@@ -1,0 +1,113 @@
+
+{% extends 'Dress_Fit/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'chat.css' %}">
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="{% static 'js/js/jquery-3.2.1.min.js' %}"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="{% static 'js/js/bootstrap.min.js' %}"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+ 	<div class="about py-12" id="about" >
+		<div class="container py-xl-5 py-lg-3">
+            <div class="alert alert-warning" role="alert">
+
+
+			<h3 class="title-w3 mb-sm-5 mb-4 text-dark text-center font-weight-bold">DRESS OVERLAP   </h3>
+
+</div>
+
+            <div class="card-body">
+
+                	<form   method="post">
+							         {% csrf_token %}
+ <input type="file" id="imagein"   name="imagein"   class="form-control"   required/>
+<br/>
+     <span class="input-group-btn">
+ 	<input class="btn btn-danger"  type="submit" value="FIT DRESS" name="Predict">
+         <a   class="btn btn-warning" href="DRESS_OVER"> Reset  </a>
+
+</span>
+						</form>
+
+
+
+
+
+
+        {% if filename_path %}
+<center>
+ 	<img src="{{filename_path}}" class="img-responsive w3layouts agileits" alt="Corporation">
+
+
+
+</center>
+    {% endif %}
+
+
+
+
+
+
+</div></div>
+
+
+
+
+
+     <script language="javascript">
+        function printdiv(printpage) {
+            var headstr = "<html><head><title></title></head><body>";
+            var footstr = "</body>";
+            var newstr = document.all.item(printpage).innerHTML;
+            var oldstr = document.body.innerHTML;
+            document.body.innerHTML = headstr + newstr + footstr;
+            window.print();
+            document.body.innerHTML = oldstr;
+            location.reload();
+            return false;
+        }
+    </script>
+
+
+
+
+
+</body>
+
+
+
+<script src="{% static 'chat.js' %}"></script>
+</html>
+
+
+
+{% endblock content %}
+
+
+
+
+
+
