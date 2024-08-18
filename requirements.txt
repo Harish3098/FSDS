@@ -7,8 +7,8 @@ matplotlib==3.8.4
 gluoncv==0.10.5.post0
 pillow==10.3.0
 flask==2.2.5
-django==5.0.6
+django==4.2.15
 mpld3==0.5.10
 scikit-learn==1.4.2
-gunicorn==20.1.0 
-
+gunicorn==20.1.0
+pillow==10.3.0

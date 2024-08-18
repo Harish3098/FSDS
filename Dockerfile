@@ -1,9 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.10-slim
-
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+FROM python:3.8-slim
 
 ADD . /app
 # Set the working directory in the container
@@ -15,15 +11,13 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
     libxrender-dev \
+    libgl1-mesa-glx \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-
-# Copy the current directory contents into the container at /app
-COPY . .
 
 # Expose port 8000 (default port for Django)
 EXPOSE 8000
